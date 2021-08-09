@@ -23,10 +23,10 @@ const BeerForm = () => {
 
   return <form onSubmit={handleSubmit}>
     <input placeholder="Name" onChange={((e) => setName(e.target.value))} value={name}></input>
-    <input placeholder="Image" onChange={((e) => setImage(e.target.value))} value={name}></input>
-    <input placeholder="Alcohol%" onChange={((e) => setAbv(e.target.value))} value={name}></input>
-    <input placeholder="Type" onChange={((e) => setType(e.target.value))} value={name}></input>
-    <input placeholder="Rating" onChange={((e) => setRating(e.target.value))} value={name}></input>
+    <input placeholder="Image" onChange={((e) => setImage(e.target.value))} value={image}></input>
+    <input placeholder="Alcohol%" onChange={((e) => setAbv(e.target.value))} value={abv}></input>
+    <input placeholder="Type" onChange={((e) => setType(e.target.value))} value={type}></input>
+    <input placeholder="Rating" onChange={((e) => setRating(e.target.value))} value={rating}></input>
     <button>Submit</button>
   </form>;
 

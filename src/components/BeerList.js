@@ -23,7 +23,7 @@ const BeerList = () => {
       <button
         disabled={page <= 1}
         onClick={() => setPage((prevPage) => prevPage - 1)}
-      >$lt;</button>
+      >&lt;</button>
       {page}
       <button onClick={() => setPage((prevPage) => prevPage + 1)}>&gt;</button>
       <ul>{beerElements}</ul>
