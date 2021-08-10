@@ -1,12 +1,15 @@
 /* eslint-disable max-len */
 export const makeBeer = async (body) => {
-  await fetch('https://pure-sands-36666.herokuapp.com/api/v1/beers', {
+  console.log(body);
+  const res = await fetch('https://pure-sands-36666.herokuapp.com/api/v1/beers', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json; charset=UTF-8'
     },
     body: JSON.stringify(body)
   });
+  const beer = res.json();
+  return beer;
 };
 
 export const fetchBeers = async (page) => {

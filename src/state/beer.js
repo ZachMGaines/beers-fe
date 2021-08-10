@@ -15,10 +15,13 @@ export const useBeers = (page) => {
 };
 
 export const useBeer = (id) => {
+  const [loading, setLoading] = useState(true);
   const [beer, setBeer] = useState(null);
 
   useEffect(() => {
-    fetchBeer(id).then(setBeer);
-  }, []);
-  return beer;
+    fetchBeer(id)
+      .then(setBeer)
+      .finally(() => setLoading(false));
+  }, [id]);
+  return { beer, loading };
 };
